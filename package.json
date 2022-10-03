@@ -1,0 +1,21 @@
+{
+  "name": "appo",
+  "version": "0.0.1",
+  "description": "just a CLI I use to increase productivity",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "yargs": "^17.6.0"
+  },
+  "bin": {
+    "appo": "index.js"
+  },
+  "keywords": [
+    "appo",
+    "cli"
+  ],
+  "author": "HHarukaYamamoto0 <antonioalbert344@gmail.com>",
+  "license": "MIT"
+}
