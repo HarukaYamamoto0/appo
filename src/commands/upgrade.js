@@ -12,7 +12,7 @@ class Upgrade extends Command {
     const cwd = new URL("../../", import.meta.url);
     
     await exec("git remote update", { cwd });
-    await exec("git reset --hard origin/mmain", { cwd });
+    await exec("git reset --hard origin/main", { cwd });
     await exec("npm install", { cwd });
 
     console.log("successfully updated");
