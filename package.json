@@ -1,15 +1,30 @@
 {
   "name": "appo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "just a CLI I use to increase productivity",
   "main": "src/appo.js",
   "type": "module",
   "scripts": {
-    "start": "node src/appo.js"
+    "start": "node src/appo.js",
+    "lint": "npx eslint src/**/*.js --cache --cache-strategy content",
+    "format": "prettier src/**/* --write --cache --cache-strategy content --ignore-unknown",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write --ignore-unknown",
+      "eslint --ignore-pattern '.*' --ignore-pattern '*.json'"
+    ]
   },
   "dependencies": {
     "inquirer": "^9.1.3",
     "yargs": "^17.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
   },
   "bin": {
     "appo": "src/appo.js"

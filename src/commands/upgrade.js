@@ -8,9 +8,9 @@ class Upgrade extends Command {
     this.describe = "update me to the latest version";
   }
 
-  async handler(args) {
+  async handler() {
     const cwd = new URL("../../", import.meta.url);
-    
+
     await exec("git remote update", { cwd });
     await exec("git reset --hard origin/main", { cwd });
     await exec("npm install", { cwd });

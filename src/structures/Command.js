@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 class Command {
   constructor() {
     this.command = "occult command";
